@@ -8,7 +8,6 @@
 import SwiftUI
 import UIKit
 
-// ImagePicker struct to wrap UIImagePickerController
 struct ImagePicker: UIViewControllerRepresentable {
     @Binding var selectedImage: UIImage?
     @Environment(\.presentationMode) var presentationMode
@@ -16,7 +15,6 @@ struct ImagePicker: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIImagePickerController {
         let picker = UIImagePickerController()
         picker.delegate = context.coordinator
-        picker.sourceType = .photoLibrary  // Change to .camera if you want to use camera
         return picker
     }
 

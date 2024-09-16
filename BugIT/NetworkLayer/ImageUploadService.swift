@@ -1,5 +1,5 @@
 //
-//  ImageUploader.swift
+//  ImageUploadService.swift
 //  BugIT
 //
 //  Created by admin on 16/09/2024.
@@ -7,7 +7,7 @@
 
 import FirebaseStorage
 
-class ImageUploader {
+class ImageUploadService {
     
     let storage = Storage.storage()
     

@@ -6,9 +6,15 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct BugITApp: App {
+    
+    init() {
+        FirebaseApp.configure()  // This initializes Firebase
+    }
+    
     var body: some Scene {
         WindowGroup {
             BugSubmissionView()
