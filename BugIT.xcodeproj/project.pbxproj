@@ -69,13 +69,13 @@
 		840C97BC2C931D42004F5BD2 /* BugITUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BugITUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		840C97C02C931D42004F5BD2 /* BugITUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugITUITests.swift; sourceTree = "<group>"; };
 		840C97C22C931D42004F5BD2 /* BugITUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugITUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		840C97CF2C931D74004F5BD2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		840C97CF2C931D74004F5BD2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImagePicker.swift; path = "../New Group/ImagePicker.swift"; sourceTree = "<group>"; };
 		840C97D12C931DA9004F5BD2 /* BugSubmissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugSubmissionView.swift; sourceTree = "<group>"; };
 		841A1E1E9BEFAA9512DCFB28 /* Pods-BugIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugIT.debug.xcconfig"; path = "Target Support Files/Pods-BugIT/Pods-BugIT.debug.xcconfig"; sourceTree = "<group>"; };
 		844187912C98162400D0A08D /* GoogleSheetsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetsService.swift; sourceTree = "<group>"; };
 		844187932C98244400D0A08D /* ImageUploadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadService.swift; sourceTree = "<group>"; };
 		84FE5E4D2C985A09003E55B6 /* BugSubmissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugSubmissionViewModel.swift; sourceTree = "<group>"; };
-		84FE5E6B2C98800E003E55B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		84FE5E6B2C98800E003E55B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "BugIT/Utiles/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		852B7182D3BE6D2111E21D39 /* Pods-BugITTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugITTests.debug.xcconfig"; path = "Target Support Files/Pods-BugITTests/Pods-BugITTests.debug.xcconfig"; sourceTree = "<group>"; };
 		97B59B8D65AC337CDDE9D87C /* Pods_BugIT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BugIT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3625EDB6FE20CB251AEAAF6 /* Pods_BugITTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BugITTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,14 +149,11 @@
 		840C97A42C931D3F004F5BD2 /* BugIT */ = {
 			isa = PBXGroup;
 			children = (
-				84FE5E6B2C98800E003E55B6 /* GoogleService-Info.plist */,
+				84FE5E6F2C997E13003E55B6 /* Utiles */,
+				84FE5E6E2C997DF4003E55B6 /* Model */,
+				84FE5E6D2C997DCF003E55B6 /* View */,
 				84FE5E4C2C9859DF003E55B6 /* ViewModel */,
-				844187902C9815F300D0A08D /* NetworkLayer */,
-				840C97A52C931D3F004F5BD2 /* BugITApp.swift */,
-				840C97A92C931D41004F5BD2 /* Assets.xcassets */,
 				840C97AB2C931D41004F5BD2 /* Preview Content */,
-				840C97CF2C931D74004F5BD2 /* ImagePicker.swift */,
-				840C97D12C931DA9004F5BD2 /* BugSubmissionView.swift */,
 			);
 			path = BugIT;
 			sourceTree = "<group>";
@@ -192,7 +189,8 @@
 				844187912C98162400D0A08D /* GoogleSheetsService.swift */,
 				844187932C98244400D0A08D /* ImageUploadService.swift */,
 			);
-			path = NetworkLayer;
+			name = NetworkLayer;
+			path = "../New Group1/NetworkLayer";
 			sourceTree = "<group>";
 		};
 		84FE5E4C2C9859DF003E55B6 /* ViewModel */ = {
@@ -201,6 +199,33 @@
 				84FE5E4D2C985A09003E55B6 /* BugSubmissionViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84FE5E6D2C997DCF003E55B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				840C97D12C931DA9004F5BD2 /* BugSubmissionView.swift */,
+				840C97CF2C931D74004F5BD2 /* ImagePicker.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84FE5E6E2C997DF4003E55B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				844187902C9815F300D0A08D /* NetworkLayer */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84FE5E6F2C997E13003E55B6 /* Utiles */ = {
+			isa = PBXGroup;
+			children = (
+				840C97A92C931D41004F5BD2 /* Assets.xcassets */,
+				840C97A52C931D3F004F5BD2 /* BugITApp.swift */,
+				84FE5E6B2C98800E003E55B6 /* GoogleService-Info.plist */,
+			);
+			path = Utiles;
 			sourceTree = "<group>";
 		};
 		BA006C5B9D8DE1130C891D64 /* Frameworks */ = {
