@@ -8,7 +8,12 @@
 import Foundation
 import Alamofire
 
-class GoogleSheetsService {
+protocol GoogleSheetsServiceProtocol {
+    func authenticateUser(completion: @escaping (Result<String, Error>) -> Void)
+    func appendBugData(bugDescription: String, imageURL: String, completion: @escaping (Result<Void, Error>) -> Void)
+}
+
+class GoogleSheetsService:GoogleSheetsServiceProtocol {
     
     let sheetID = "YOUR_SHEET_ID" // Replace with your Google Sheet ID
     let apiKey = "YOUR_API_KEY"   // Replace with your Google Sheets API Key

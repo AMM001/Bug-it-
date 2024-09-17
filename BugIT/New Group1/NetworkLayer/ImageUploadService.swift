@@ -7,7 +7,11 @@
 
 import FirebaseStorage
 
-class ImageUploadService {
+protocol ImageUploadServiceProtocol {
+    func uploadImage(_ image: UIImage, completion: @escaping (Result<String, Error>) -> Void)
+}
+
+class ImageUploadService:ImageUploadServiceProtocol {
     
     let storage = Storage.storage()
     
