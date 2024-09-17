@@ -8,15 +8,31 @@
 import Foundation
 import SwiftUI
 
-class BugSubmissionViewModel: ObservableObject {
+protocol BugSubmissionViewModelProtocol:AnyObject {
+    
+    var selectedImage: UIImage? { get set }
+    var bugDescription: String { get set }
+    var isUploading: Bool { get set }
+    var errorMessage: String? { get set }
+    
+    func submitBug()
+}
+
+class BugSubmissionViewModel: ObservableObject , BugSubmissionViewModelProtocol {
     
     @Published var selectedImage: UIImage? = nil
     @Published var bugDescription: String = ""
     @Published var isUploading: Bool = false
     @Published var errorMessage: String? = nil
     
-    private let googleSheetsService = GoogleSheetsService()
-    private let imageUploadService = ImageUploadService()
+    private let googleSheetsService:GoogleSheetsServiceProtocol
+    private let imageUploadService:ImageUploadServiceProtocol
+    
+    init(googleSheetsService:GoogleSheetsServiceProtocol = GoogleSheetsService() ,
+         imageUploadService:ImageUploadServiceProtocol = ImageUploadService() ){
+        self.googleSheetsService = googleSheetsService
+        self.imageUploadService = imageUploadService
+    }
     
     // Handle bug submission
     func submitBug() {

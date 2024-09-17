@@ -6,9 +6,9 @@
 
 import SwiftUI
 
-struct BugSubmissionView: View {
+struct BugSubmissionView<ViewModel: BugSubmissionViewModelProtocol & ObservableObject>: View {
     
-    @ObservedObject var viewModel = BugSubmissionViewModel()
+    @ObservedObject var viewModel: ViewModel
     @State private var isImagePickerPresented = false
 
     var body: some View {
@@ -70,5 +70,5 @@ struct BugSubmissionView: View {
 
 
 #Preview {
-    BugSubmissionView()
+    BugSubmissionView(viewModel: BugSubmissionViewModel())
 }

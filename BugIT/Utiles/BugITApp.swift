@@ -17,7 +17,8 @@ struct BugITApp: App {
     
     var body: some Scene {
         WindowGroup {
-            BugSubmissionView()
+            let viewModel = BugSubmissionViewModel()
+            BugSubmissionView(viewModel: viewModel)
         }
     }
 }
